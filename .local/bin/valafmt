@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+uncrustify-- no - backup - l vala - c "$HOME/.vala-uncrustify.cfg"-- replace "$@"

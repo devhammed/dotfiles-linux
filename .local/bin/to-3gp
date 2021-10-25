@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ffmpeg -y -i "$1" -vcodec h263 -ar 8000 -b:a 12.20k -ac 1 -s 352x288 "${1%.*}.3gp"
