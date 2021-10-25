@@ -1,7 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "dart",
-    "ruby",
     "javascript",
     "python",
     "json",
@@ -16,7 +15,7 @@
   "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
-  "cSpell.userWords": ["solargraph", "vala"],
+  "cSpell.userWords": ["vala"],
   "python.jediEnabled": false,
   "languageserver": {
     "vala": {
