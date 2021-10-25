@@ -1,0 +1,5 @@
+[username]
+show_always = true
+
+[python]
+python_binary = "python3"
