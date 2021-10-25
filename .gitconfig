@@ -1,0 +1,16 @@
+[user]
+	name = Hammed Oyedele
+	email = itz.harmid@gmail.com
+	username = devhammed
+	signingkey = B8E2CB30A8D8071C
+[init]
+	defaultBranch = main
+	templatedir = ~/.git-template
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[tag]
+	forceSignAnnotated = true
+[pull]
+	rebase = false
