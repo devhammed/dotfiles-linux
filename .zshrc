@@ -71,7 +71,6 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  gh
   git
   npm
   pip
@@ -80,7 +79,6 @@ plugins=(
   docker
   golang
   heroku
-  rustup
   flutter
   artisan
   zsh-completions
@@ -115,6 +113,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# load Homebrew ZSH autocompletions
+if type brew &>/dev/null; then
+  fpath+="$(brew --prefix)/share/zsh/site-functions"
+
+  autoload -Uz compinit
+
+  if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+    touch .zcompdump
+  else
+    compinit -C
+  fi
+fi
 
 # Load Zoxide
 eval "$(zoxide init zsh)"

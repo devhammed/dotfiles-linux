@@ -38,12 +38,6 @@ PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin";
 MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
-# load Homebrew ZSH autocompletions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-  fpath+="$(brew --prefix)/share/zsh/site-functions"
-fi
-
 # load Flutter and Dart global packages environment
 PATH="$HOME/Tools/flutter/bin:$HOME/.pub-cache/bin:$PATH"
 
@@ -54,7 +48,7 @@ GOSRC="$GOPATH/src/github.com/$USER"
 [[ ! -d "$GOSRC" ]] && mkdir -p "$GOSRC"
 
 # setup Rust environment
-[[ -f "$HOME/.cargo/env" ]] && source $HOME/.cargo/env
+PATH="$HOME/.cargo/bin:$PATH"
 
 # Load Node.js extra CA Certificates
 NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
