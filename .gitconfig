@@ -12,4 +12,4 @@
 [pull]
 	rebase = false
 [includeIf "gitdir:~/Projects/Decagon/"]
-  path = ~/.gitconfig-decagon
+	path = ~/.gitconfig-decagon
