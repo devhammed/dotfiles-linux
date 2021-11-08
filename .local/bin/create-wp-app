@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+wp core download --path="$1"
