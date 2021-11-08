@@ -77,6 +77,7 @@ plugins=(
   yarn
   sudo
   docker
+  wp-cli
   golang
   heroku
   flutter
@@ -122,7 +123,7 @@ if type brew &>/dev/null; then
 
   if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
     compinit
-    touch .zcompdump
+    touch ~/.zcompdump
   else
     compinit -C
   fi
