@@ -5,6 +5,7 @@
 	signingkey = B8E2CB30A8D8071C
 [init]
 	defaultBranch = main
+	templatedir = ~/.git-template
 [commit]
 	gpgsign = true
 [tag]

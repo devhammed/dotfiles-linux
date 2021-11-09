@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+commit_message=$(cat "$1")
+commit_style='^(revert: )?((build|ci|docs|feat|fix|perf|refactor|style|test|chore)(\(.+\))?: .{5,50}|Initial commit)'
+
+[[ "$commit_message" =~ $commit_style ]] || {
+  echo 'Commit message does not follow the style convention!'
+  exit 1
+}
