@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+sudo apt update && sudo apt upgrade && sudo apt autoremove
+
+brew upgrade
+
+snap refresh
+
+flatpak update
+
+flutter upgrade
