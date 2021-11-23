@@ -8,4 +8,6 @@ snap refresh
 
 flatpak update
 
+npm up -g
+
 flutter upgrade
