@@ -1,7 +1,6 @@
 {
     "require": {
-        "genesisweb/valet-linux-plus": "^1.5",
-        "friendsofphp/php-cs-fixer": "^3.3"
+        "genesisweb/valet-linux-plus": "^1.5"
     },
     "require-dev": {
         "automattic/vipwpcs": "^2.3",
