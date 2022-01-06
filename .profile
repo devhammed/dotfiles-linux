@@ -71,3 +71,13 @@ PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
 # Load Composer environment
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
+# Setup SSH-Agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval "$(ssh-agent -s)"
+
+  ssh-add ~/.ssh/id_vertex_hp_250_g8 > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_decagon_hp_250_g8 > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_personal_hp_250_g8 > /dev/null 2>&1
+fi
