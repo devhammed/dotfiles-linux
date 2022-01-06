@@ -12,5 +12,9 @@
 	forceSignAnnotated = true
 [pull]
 	rebase = false
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_personal_hp_250_g8"
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
+[includeIf "gitdir:~/Projects/Vertex/"]
+	path = ~/.gitconfig-vertex

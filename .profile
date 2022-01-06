@@ -66,6 +66,8 @@ PATH="$ANDROID_HOME/emulator:$PATH"
 PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 PATH="$ANDROID_HOME/platform-tools:$PATH"
 ADB="$ANDROID_HOME/platform-tools/adb"
+PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
 
 # Load Composer environment
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
