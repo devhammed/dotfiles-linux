@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+find -name "*.template" -exec sh -c 'copyTo="${0%.*}"; [ ! -e "$copyTo" ] && cp -r "$0" "$copyTo" && echo "created: $copyTo" || echo "skipped: $copyTo"' {} \;
