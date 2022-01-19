@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+script=$(basename "$0")
+
+# Display usage if no arguments are given
+if [[ $# -ne 1 ]]; then
+  echo "$script: Create a new deployment by tagging branch and push it to the remote repository."
+  echo ""
+  echo "Usage: $script <version> [<commit>] [<remote>]"
+  echo ""
+  exit
+fi
+
+# Setup variables
+version="$1"
+versionName="v$version"
+message="${2:-$version}"
+remote="${3:-origin}"
+
+# Handle flutter projects...
+if [ -f pubspec.yaml ]; then
+  sed -i "s/version: \(.*\)/version: $version/g" pubspec.yaml
+
+  flutter pub get
+fi
+
+# Handle npm projects...
+if [ -f package.json ]; then
+  npm --no-git-tag-version version "$version"
+
+  npm install
+fi
+
+# Commit changes...
+git commit -am 'build: bump project version'
+
+# Tag repository...
+git tag -a "$versionName" -m "$message"
+
+# Push the new tag to the remote repository.
+git push "$remote" "$versionName"
