@@ -34,6 +34,9 @@ fi
 # Commit changes...
 git commit -am 'build: bump project version'
 
+# Push changes...
+git push "$remote"
+
 # Tag repository...
 git tag -a "$versionName" -m "$message"
 
