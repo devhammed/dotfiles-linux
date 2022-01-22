@@ -19,7 +19,7 @@ remote="${3:-origin}"
 
 # Handle flutter projects...
 if [ -f pubspec.yaml ]; then
-  sed -i "s/version: \(.*\)/version: $version/g" pubspec.yaml
+  sed -i "s/^version: \(.*\)/version: $version/g" pubspec.yaml
 
   flutter pub get
 fi
