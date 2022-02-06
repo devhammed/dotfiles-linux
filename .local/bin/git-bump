@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-git push && git tag "$@" && git push --tags
