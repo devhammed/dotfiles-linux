@@ -4,22 +4,119 @@ script=$(basename "$0")
 
 # Display usage if no arguments are given
 if [[ $# -ne 1 ]]; then
-  echo "$script: Create a new deployment by tagging branch and push it to the remote repository."
+  echo "$script: Create a new deployment by tagging and pushing branch to the remote repository."
   echo ""
-  echo "Usage: $script <version> [<commit>] [<remote>]"
+  echo "Usage: $script <major|minor|patch|build> [<message>] [<remote>]"
+  echo ""
+  echo "You can also use the plus character instead to represent type: major (++++), minor (+++), patch (++) or build (+)."
   echo ""
   exit
 fi
 
-# Setup variables
-version="$1"
-versionName="v$version"
-message="${2:-$version}"
-remote="${3:-origin}"
+# Semver regex variables
+semverRegex="([0-9]+).([0-9]+).([0-9]+)(\+([0-9]+))?"
+yamlVersionRegex="^version: $semverRegex$"
+jsonVersionRegex="^\s+?\"version\": \"($semverRegex)\",$"
 
 # Handle flutter projects...
 if [ -f pubspec.yaml ]; then
-  sed -i "s/^version: \(.*\)/version: $version/g" pubspec.yaml
+  version="$(grep -oP "$yamlVersionRegex" pubspec.yaml)"
+fi
+
+# Handle npm projects...
+if [ -f package.json ]; then
+  version="$(grep -oP "$jsonVersionRegex" package.json)"
+fi
+
+# Handle composer projects...
+if [ -f composer.json ]; then
+  version="$(grep -oP "$jsonVersionRegex" composer.json)"
+fi
+
+# Check for existing version
+if [ -z "$version" ]; then
+  echo "No version found in project."
+  exit 1
+fi
+
+# Check semver format
+if [[ ! $version =~ $semverRegex ]]; then
+  echo "Invalid semantic version format: $version"
+  exit 1
+fi
+
+# Setup version variables
+major="${BASH_REMATCH[1]}"
+minor="${BASH_REMATCH[2]}"
+patch="${BASH_REMATCH[3]}"
+build="${BASH_REMATCH[5]}"
+
+# Increment version
+case "$1" in
+major | ++++)
+  major=$((major + 1))
+  minor=0
+  patch=0
+
+  if [ -n "$build" ]; then
+    build=$((build + 1))
+  fi
+  ;;
+minor | +++)
+  minor=$((minor + 1))
+  patch=0
+
+  if [ -n "$build" ]; then
+    build=$((build + 1))
+  fi
+  ;;
+patch | ++)
+  patch=$((patch + 1))
+
+  if [ -n "$build" ]; then
+    build=$((build + 1))
+  fi
+  ;;
+build | +)
+  if [ -n "$build" ]; then
+    build=$((build + 1))
+  else
+    build=1
+  fi
+  ;;
+*)
+  echo "Invalid semver type: $1"
+  exit 1
+  ;;
+esac
+
+# Format new version
+version="$major.$minor.$patch"
+
+if [ -n "$build" ]; then
+  version="$version+$build"
+fi
+
+# Confirm deployment
+echo "Deploying new version $version..."
+
+read -p "Continue? [y/N] " -n 1 -r
+
+echo ""
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  echo "Aborting."
+  exit 1
+fi
+
+# Setup variables based on the new version
+remote="${3:-origin}"
+versionName="v$version"
+message="${2:-Release version $version}"
+
+# Handle flutter projects...
+if [ -f pubspec.yaml ]; then
+  sed -i "s/^version: \(.*\)$/version: $version/g" pubspec.yaml
 
   flutter pub get
 fi
@@ -29,6 +126,13 @@ if [ -f package.json ]; then
   npm --no-git-tag-version version "$version"
 
   npm install
+fi
+
+# Handle composer projects...
+if [ -f composer.json ]; then
+  sed -i "s/$jsonVersionRegex/  \"version\": \"$version\",/" composer.json
+
+  composer install
 fi
 
 # Commit changes...
