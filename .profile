@@ -81,3 +81,4 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 
   ssh-add ~/.ssh/id_personal_hp_250_g8 > /dev/null 2>&1
 fi
+
