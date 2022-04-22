@@ -19,3 +19,5 @@
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
 	path = ~/.gitconfig-vertex
+[merge]
+	renamelimit = 10000
