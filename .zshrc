@@ -129,6 +129,9 @@ if type brew &>/dev/null; then
   fi
 fi
 
+# Disable PHP-CS-Fixer env checks
+export PHP_CS_FIXER_IGNORE_ENV=true
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc'; fi
 
