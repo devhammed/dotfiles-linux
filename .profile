@@ -59,6 +59,9 @@ EDITOR="vim"
 # Set CLI Web Browser
 BROWSER="google-chrome"
 
+# Disable PHP-CS-Fixer Env checks
+PHP_CS_FIXER_IGNORE_ENV=true
+
 # Load Android SDK Environment
 ANDROID_HOME="$HOME/Android/Sdk"
 ANDROID_SDK_ROOT="$ANDROID_HOME"
