@@ -3,7 +3,7 @@
 credentials="$HOME/.zeplin_credentials.sh"
 
 if [ ! -f "$credentials" ]; then
-  echo "zeplin credentials file doesn't exist, create at $credentials"
+  echo "zeplin credentials file doesn't exist, create at '$credentials'"
   exit 1
 fi
 
