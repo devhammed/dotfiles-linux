@@ -18,6 +18,8 @@
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
-	path = ~/.gitconfig-vertex
+  path = ~/.gitconfig-vertex
+[includeIf "gitdir:~/Projects/GistHouse/"]
+  path = ~/.gitconfig-gisthouse
 [merge]
 	renamelimit = 10000

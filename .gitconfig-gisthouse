@@ -1,0 +1,5 @@
+[user]
+	email = harmid@gisthouse.com
+	signingkey = 0BDD9C71CA94E336
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_gisthouse_hp_250_g8"
