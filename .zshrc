@@ -143,3 +143,10 @@ eval "$(zoxide init zsh)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/home/devhammed/.bun/_bun" ] && source "/home/devhammed/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
