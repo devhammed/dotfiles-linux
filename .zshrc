@@ -115,6 +115,64 @@ source $ZSH/oh-my-zsh.sh
 alias cat="bat"
 alias zshconfig="vim ~/.zshrc"
 
+# Load Snapcraft Environment
+export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
+
+# load Homebrew environment
+export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+export HOMEBREW_SHELLENV_PREFIX="/home/linuxbrew/.linuxbrew";
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin";
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
+
+# load Flutter and Dart global packages environment
+export PATH="$HOME/Tools/flutter/bin:$HOME/.pub-cache/bin:$PATH"
+
+# setup Go environment
+export GOPATH="$HOME/Tools/go"
+export PATH="$GOPATH/bin:$PATH"
+export GOSRC="$GOPATH/src/github.com/$USER"
+[[ ! -d "$GOSRC" ]] && mkdir -p "$GOSRC"
+
+# setup Rust environment
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Load Node.js extra CA Certificates
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
+# Set CLI Editor
+export EDITOR="vim"
+
+# Set CLI Web Browser
+export BROWSER="google-chrome"
+
+# Load Android SDK Environment
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export ADB="$ANDROID_HOME/platform-tools/adb"
+export PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
+
+# Load Composer environment
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Setup SSH-Agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval "$(ssh-agent -s)"
+
+  ssh-add ~/.ssh/id_vertex_hp_250_g8 > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_decagon_hp_250_g8 > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_personal_hp_250_g8 > /dev/null 2>&1
+
+  ssh-add ~/.ssh/id_gisthouse_hp_250_g8 > /dev/null 2>&1
+fi
+
 # load Homebrew ZSH autocompletions
 if type brew &>/dev/null; then
   fpath+="$(brew --prefix)/share/zsh/site-functions"
