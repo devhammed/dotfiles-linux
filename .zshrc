@@ -176,15 +176,21 @@ fi
 # load Homebrew ZSH autocompletions
 if type brew &>/dev/null; then
   fpath+="$(brew --prefix)/share/zsh/site-functions"
+fi
 
-  autoload -Uz compinit
+# include custom completions
+if [[ -d "$HOME/.zfunc" ]]; then
+  fpath+="$HOME/.zfunc"
+fi
 
-  if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-    touch ~/.zcompdump
-  else
-    compinit -C
-  fi
+# initialize completions engine
+autoload -Uz compinit
+
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+  touch ~/.zcompdump
+else
+  compinit -C
 fi
 
 # Disable PHP-CS-Fixer env checks
