@@ -1,21 +1,21 @@
 'use strict'
 
-const Main = imports.ui.main
+const Main = imports.ui.main;
 
 /**
  * Reference to the old activities text.
  *
  * @var Gtk.Label
  */
-let oldLabel
+let oldLabel;
 
 /**
  * Get Panel "Activities" button.
  *
  * @returns Gtk.St.Bin
  */
-function _getPanelActivities() {
-  return Main.panel.find_child_by_name('panelActivities')
+function $getPanelActivities() {
+  return Main.panel.find_child_by_name('panelActivities');
 }
 
 /**
@@ -25,13 +25,15 @@ function _getPanelActivities() {
  * @returns void
  */
 function enable() {
-  const panelActivities = _getPanelActivities()
+  const panelActivities = $getPanelActivities();
 
-  if (!panelActivities) return
+  if (!panelActivities) {
+    return;
+  }
 
-  oldLabel = panelActivities._label.text
+  oldLabel = panelActivities._label.text;
 
-  panelActivities._label.text = '🚀  DevHammed'
+  panelActivities._label.text = '🚀  DevHammed';
 }
 
 /**
@@ -41,9 +43,11 @@ function enable() {
  * @returns void
  */
 function disable() {
-  const panelActivities = _getPanelActivities()
+  const panelActivities = $getPanelActivities();
 
-  if (!panelActivities) return
+  if (!panelActivities) {
+    return;
+  }
 
-  panelActivities._label.text = oldLabel
+  panelActivities._label.text = oldLabel;
 }
