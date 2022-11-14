@@ -30,12 +30,29 @@ for attribute in attributes:
     if not attribute['isNullable']:
         output += 'required '
     
-    output += '%s %s,\n' % (attribute['dataType'], attribute['prop'])
+    output += 'this.%s,\n' % (attribute['prop'],)
 
 output += '%s});\n' % (indent,)
 
 for attribute in attributes:
     output += '\n%sfinal %s %s;' % (indent, attribute['dataType'], attribute['prop'])
 
+output += '\n\n%sfactory %s.fromMap(Map<String, dynamic> map) {' % (indent, class_name,)
+
+output += '\n%s%sreturn %s(' % (indent, indent, class_name)
+
+for attribute in attributes:
+    output += '\n%s%s%s%s: map[\'%s\'],' % (indent, indent, indent, attribute['prop'], attribute['prop'])
+
+output += '\n%s%s);' % (indent, indent)
+
+output += '\n%s}' % (indent,)
+
 stdout.write('%s\n}' % (output,))
 
+for attribute in attributes:
+    output += '\n%s%s%s%s: map[\'%s\'],' % (indent, indent, indent, attribute['prop'], attribute['prop'])
+
+output += '\n%s%s);' % (indent, indent)
+
+output += '\n%s}' % (indent,)
