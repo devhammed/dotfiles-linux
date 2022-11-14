@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from functools import reduce
 from sys import stdin, stdout, stderr, argv
 
 indent = '  '
@@ -21,7 +22,8 @@ for line in model.splitlines():
     attributes.append({
         'prop': prop,
         'dataType': dataType,
-        'isNullable': isNullable
+        'isNullable': isNullable,
+        'propInMap': reduce(lambda x, y: x + ('_' if y.isupper() else '') + y, prop).lower(),
     })
 
 for attribute in attributes:
@@ -42,7 +44,7 @@ output += '\n\n%sfactory %s.fromMap(Map<String, dynamic> map) {' % (indent, clas
 output += '\n%s%sreturn %s(' % (indent, indent, class_name)
 
 for attribute in attributes:
-    output += '\n%s%s%s%s: map[\'%s\'],' % (indent, indent, indent, attribute['prop'], attribute['prop'])
+    output += '\n%s%s%s%s: map[\'%s\'],' % (indent, indent, indent, attribute['prop'], attribute['propInMap'])
 
 output += '\n%s%s);' % (indent, indent)
 
@@ -55,7 +57,7 @@ output += '\n\n%sMap<String, dynamic> toMap() {' % (indent,)
 output += '\n%s%sreturn {' % (indent, indent)
 
 for attribute in attributes:
-    output += '\n%s%s%s\'%s\': %s,' % (indent, indent, indent, attribute['prop'], attribute['prop'])
+    output += '\n%s%s%s\'%s\': %s,' % (indent, indent, indent, attribute['propInMap'], attribute['prop'])
     
 output += '\n%s%s};' % (indent, indent)
 
