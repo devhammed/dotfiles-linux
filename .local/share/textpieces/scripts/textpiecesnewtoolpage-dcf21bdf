@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+from sys import stdin, stdout, stderr, argv
+
+indent = '  '
+attributes = []
+model = stdin.read()
+class_name = argv[1]
+output = 'class %s {\n%sconst %s({\n' % (class_name, indent, class_name)
+
+for line in model.splitlines():
+    declaration = line.split(':')
+    
+    if len(declaration) != 2:
+        continue
+    
+    prop = declaration[0].strip()
+    dataType = declaration[1].strip()
+    isNullable = dataType.endswith('?')
+    
+    attributes.append({
+        'prop': prop,
+        'dataType': dataType,
+        'isNullable': isNullable
+    })
+
+for attribute in attributes:
+    output += '%s%s' % (indent, indent)
+    
+    if not attribute['isNullable']:
+        output += 'required '
+    
+    output += '%s %s,\n' % (attribute['dataType'], attribute['prop'])
+
+output += '%s});\n' % (indent,)
+
+for attribute in attributes:
+    output += '\n%sfinal %s %s;' % (indent, attribute['dataType'], attribute['prop'])
+
+stdout.write('%s\n}' % (output,))
+
