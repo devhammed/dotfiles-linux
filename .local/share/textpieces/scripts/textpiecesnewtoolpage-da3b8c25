@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+from sys import stdin, stdout
+
+alpha = float(stdin.read())
+
+hexed = hex(round(alpha * 255))
+
+stdout.write(hexed)
+
