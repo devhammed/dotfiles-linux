@@ -50,7 +50,7 @@ output += '\n%s%s);' % (indent, indent)
 
 output += '\n%s}' % (indent,)
 
-output += '\n\n%sfactory %s.fromJson(String json) =>\n%s%s%s.fromMap(jsonDecode(json));' % (indent, class_name, indent, indent, class_name)
+output += '\n\n%sfactory %s.fromJson(String json) =>\n%s%s%s%s.fromMap(jsonDecode(json));' % (indent, class_name, indent, indent, indent, class_name)
 
 output += '\n\n%sMap<String, dynamic> toMap() {' % (indent,)
 
