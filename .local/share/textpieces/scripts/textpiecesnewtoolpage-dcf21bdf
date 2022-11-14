@@ -6,7 +6,7 @@ indent = '  '
 attributes = []
 model = stdin.read()
 class_name = argv[1]
-output = 'class %s {\n%sconst %s({\n' % (class_name, indent, class_name)
+output = 'import \'dart:convert\';\n\nclass %s {\n%sconst %s({\n' % (class_name, indent, class_name)
 
 for line in model.splitlines():
     declaration = line.split(':')
@@ -48,11 +48,20 @@ output += '\n%s%s);' % (indent, indent)
 
 output += '\n%s}' % (indent,)
 
-stdout.write('%s\n}' % (output,))
+output += '\n\n%sfactory %s.fromJson(String json) =>\n%s%s%s.fromMap(jsonDecode(json));' % (indent, class_name, indent, indent, class_name)
+
+output += '\n\n%sMap<String, dynamic> toMap() {' % (indent,)
+
+output += '\n%s%sreturn {' % (indent, indent)
 
 for attribute in attributes:
-    output += '\n%s%s%s%s: map[\'%s\'],' % (indent, indent, indent, attribute['prop'], attribute['prop'])
-
-output += '\n%s%s);' % (indent, indent)
+    output += '\n%s%s%s\'%s\': %s,' % (indent, indent, indent, attribute['prop'], attribute['prop'])
+    
+output += '\n%s%s};' % (indent, indent)
 
 output += '\n%s}' % (indent,)
+
+output += '\n\n%sString toJson() => jsonEncode(toMap());' % (indent,)
+
+stdout.write('%s\n}' % (output,))
+
