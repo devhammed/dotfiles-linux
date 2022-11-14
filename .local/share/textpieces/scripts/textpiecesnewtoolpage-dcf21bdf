@@ -58,12 +58,35 @@ output += '\n%s%sreturn {' % (indent, indent)
 
 for attribute in attributes:
     output += '\n%s%s%s\'%s\': %s,' % (indent, indent, indent, attribute['propInMap'], attribute['prop'])
-    
+
 output += '\n%s%s};' % (indent, indent)
 
 output += '\n%s}' % (indent,)
 
 output += '\n\n%sString toJson() => jsonEncode(toMap());' % (indent,)
+
+output += '\n\n%s%s copyWith({' % (indent, class_name)
+
+for attribute in attributes:
+    output += '\n%s%s' % (indent, indent)
+    
+    if attribute['isNullable']:
+        output += attribute['dataType']
+    else:
+        output += '%s?' % (attribute['dataType'],)
+    
+    output += ' %s,' % (attribute['prop'],)
+
+output += '\n%s}) {' % (indent,)
+
+output += '\n%s%sreturn %s(' % (indent, indent, class_name)
+
+for attribute in attributes:
+    output += '\n%s%s%s%s: %s ?? this.%s,' % (indent, indent, indent, attribute['prop'], attribute['prop'], attribute['prop'])
+    
+output += '\n%s%s);' % (indent, indent)
+
+output += '\n%s}' % (indent,)
 
 stdout.write('%s\n}' % (output,))
 
