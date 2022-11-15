@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 alias cat="bat"
 alias zshconfig="vim ~/.zshrc"
 alias flg="fluttergen"
+alias flpb="flutter pub run build_runner build --delete-conflicting-outputs"
 
 # Load Snapcraft Environment
 export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
