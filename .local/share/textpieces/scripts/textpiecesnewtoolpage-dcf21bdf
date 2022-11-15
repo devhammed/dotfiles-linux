@@ -7,6 +7,7 @@ indent = '  '
 attributes = []
 model = stdin.read()
 class_name = argv[1]
+should_override_equality = argv[2] == 'y' if len(argv) >= 3 else False
 output = 'import \'dart:convert\';\n\nclass %s {\n%sconst %s({\n' % (class_name, indent, class_name)
 
 for line in model.splitlines():
@@ -88,5 +89,41 @@ output += '\n%s%s);' % (indent, indent)
 
 output += '\n%s}' % (indent,)
 
-stdout.write('%s\n}' % (output,))
+if should_override_equality:
+    buffer = []
+    
+    output += '\n\n%s@override' % (indent,)
+
+    output += '\n%sint get hashCode => ' % (indent,)
+
+    for attribute in attributes:
+       buffer.append('%s.hashCode' % (attribute['prop'],))
+
+    output += '%s;' % (' ^ '.join(buffer),)
+
+    buffer = []
+    
+    output += '\n\n%s@override' % (indent,)
+    
+    output += '\n%sbool operator ==(Object other) =>' % (indent,)
+    
+    output += '\n%s%s%sidentical(this, other) ||' % (indent, indent, indent)
+    
+    output += '\n%s%s%sother is %s' % (indent, indent, indent, class_name)
+    
+    output += ' &&\n%s%s%s%s%s%s == other.%s' % (indent, indent, indent, indent, indent, 'runtimeType', 'runtimeType')
+    
+    if len(attributes) > 0:
+        output += ' &&\n'
+        
+        for attribute in attributes:
+            buffer.append('%s%s%s%s%s%s == other.%s' % (indent, indent, indent, indent, indent, attribute['prop'], attribute['prop']))
+            
+        output += ' &&\n'.join(buffer)
+        buffer = []
+    
+    output += ';'
+
+
+stdout.write('%s\n}\n' % (output,))
 
