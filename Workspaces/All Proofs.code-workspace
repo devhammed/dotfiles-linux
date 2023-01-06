@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "app",
+      "path": "../Projects/Personal/allproofs"
+    },
+    {
+      "name": "web",
+      "path": "../Projects/Personal/allproofs-web"
+    }
+  ],
+  "settings": {}
+}

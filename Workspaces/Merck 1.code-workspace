@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "mhh-merck-mco-theme",
+      "path": "../Projects/Vertex/mhh-merck-website/packages/mhh-merck-mco-theme"
+    },
+    {
+      "name": "mhh-corporateberg",
+      "path": "../Projects/Vertex/mhh-merck-website/packages/mhh-corporateberg"
+    },
+    {
+      "name": "mhh-pharmacy-locator-search",
+      "path": "../Projects/Vertex/mhh-merck-website/packages/mhh-pharmacy-locator-search"
+    }
+  ]
+}

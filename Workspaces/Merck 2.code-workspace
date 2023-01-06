@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "name": "mhh-mhh2-mcc-theme",
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-mhh2-mcc-theme"
+    },
+    {
+      "name": "mhh-mhh2-msd-theme",
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-mhh2-msd-theme"
+    },
+    {
+      "name": "mhh-onetrust-cookie-consent",
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-onetrust-cookie-consent"
+    },
+    {
+      "name": "mhh-mco-data-analytics",
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-mco-data-analytics"
+    },
+    {
+      "name": "mhh-gf-omni-email",
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-gf-omni-email"
+    }
+  ]
+}
