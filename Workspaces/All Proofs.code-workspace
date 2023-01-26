@@ -1,13 +1,16 @@
 {
   "folders": [
     {
-      "name": "app",
-      "path": "../Projects/Personal/allproofs"
+      "name": "allproofs-web",
+      "path": "../Projects/AllProofs/allproofs-web"
     },
     {
-      "name": "web",
-      "path": "../Projects/Personal/allproofs-web"
+      "name": "allproofs-app",
+      "path": "../Projects/AllProofs/allproofs"
+    },
+    {
+      "name": "magicsender-app",
+      "path": "../Projects/AllProofs/magicsender"
     }
-  ],
-  "settings": {}
+  ]
 }
