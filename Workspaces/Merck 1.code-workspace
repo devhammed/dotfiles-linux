@@ -7,10 +7,6 @@
     {
       "name": "mhh-corporateberg",
       "path": "../Projects/Vertex/mhh-merck-website/packages/mhh-corporateberg"
-    },
-    {
-      "name": "mhh-pharmacy-locator-search",
-      "path": "../Projects/Vertex/mhh-merck-website/packages/mhh-pharmacy-locator-search"
     }
   ]
 }

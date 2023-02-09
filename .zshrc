@@ -162,6 +162,9 @@ export PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
 # Load Composer environment
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
+# Setup bun.sh
+export PATH="$HOME/.bun/bin:$PATH"
+
 # Setup SSH-Agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval "$(ssh-agent -s)"
@@ -209,3 +212,11 @@ eval "$(zoxide init zsh)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
+## [Completion] 
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/devhammed/.dart-cli-completion/zsh-config.zsh ]] && . /home/devhammed/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+
+# bun completions
+[ -s "/home/devhammed/.bun/_bun" ] && source "/home/devhammed/.bun/_bun"
