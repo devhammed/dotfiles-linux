@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "phpinfo",
+      "path": "../Projects/Personal/phpinfo"
+    },
+    {
+      "name": "simple-sse",
+      "path": "../Projects/Personal/simple-sse"
+    },
+    {
+      "name": "react-gtk",
+      "path": "../Projects/Personal/react-gtk"
+    },
+    {
+      "path": "../Projects/Personal/lets-learn-adonis-5"
+    },
+    {
+      "path": "../Projects/Personal/learning-javascript"
+    }
+  ]
+}
