@@ -141,6 +141,9 @@ export GOSRC="$GOPATH/src/github.com/$USER"
 # setup Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Setup WTK
+export PATH="$HOME/Tools/wtk/bin:$PATH"
+
 # Load Node.js extra CA Certificates
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
@@ -161,9 +164,6 @@ export PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
 
 # Load Composer environment
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-
-# Setup bun.sh
-export PATH="$HOME/.bun/bin:$PATH"
 
 # Setup SSH-Agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
@@ -212,11 +212,8 @@ eval "$(zoxide init zsh)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
+
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/devhammed/.dart-cli-completion/zsh-config.zsh ]] && . /home/devhammed/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
-
-
-# bun completions
-[ -s "/home/devhammed/.bun/_bun" ] && source "/home/devhammed/.bun/_bun"

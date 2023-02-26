@@ -13,12 +13,14 @@
       "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-mco-data-analytics"
     },
     {
-      "name": "mhh-gf-omni-email",
-      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-gf-omni-email"
-    },
-    {
       "name": "mhh-mhh2-msd-theme",
       "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-mhh2-msd-theme"
+    },
+    {
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-testimonials-msd"
+    },
+    {
+      "path": "../Projects/Vertex/mhh-merck2-website/packages/mhh-msdberg"
     }
   ]
 }
