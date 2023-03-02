@@ -23,6 +23,9 @@
     },
     {
       "path": "../j2mewtk/2.5.2/apps/j2me-playground"
+    },
+    {
+      "path": "../Projects/Personal/learning-docker"
     }
   ]
 }
