@@ -210,6 +210,13 @@ if [ -f '/home/devhammed/Tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
+# Setup GH Configuration Directory
+export GH_CONFIG_DIR="$HOME/.config/gh/personal"
+
+# Load DirEnv
+export DIRENV_LOG_FORMAT=
+eval "$(direnv hook zsh)"
+
 # Load Starship Prompt
 eval "$(starship init zsh)"
 
