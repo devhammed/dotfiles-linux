@@ -13,19 +13,27 @@
       "path": "../Projects/Personal/react-gtk"
     },
     {
+      "name": "lets-learn-adonis-5",
       "path": "../Projects/Personal/lets-learn-adonis-5"
     },
     {
-      "path": "../Projects/Personal/learning-javascript-with-hammed"
-    },
-    {
+      "name": "wicked.js",
       "path": "../Projects/Personal/wicked.js"
     },
     {
+      "name": "j2me-playground",
       "path": "../j2mewtk/2.5.2/apps/j2me-playground"
     },
     {
+      "name": "learning-docker",
       "path": "../Projects/Personal/learning-docker"
+    },
+    {
+      "name": "learning-javascript-with-hammed",
+      "path": "../Projects/Personal/learning-javascript-with-hammed"
+    },
+    {
+      "path": "../Projects/Personal/stereopay"
     }
   ]
 }
