@@ -34,6 +34,12 @@
     },
     {
       "path": "../Projects/Personal/stereopay"
+    },
+    {
+      "path": "../Projects/Personal/admob-ads-in-flutter"
+    },
+    {
+      "path": "../Projects/Personal/learning-elm"
     }
   ]
 }
