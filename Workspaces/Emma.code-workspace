@@ -1,7 +1,15 @@
 {
-	"folders": [
-		{
-			"path": "../Projects/Emma/emmatube"
-		}
-	]
+  "folders": [
+    {
+      "name": "emmatube-web",
+      "path": "../Projects/Emma/emmatube-web"
+    },
+    {
+      "name": "emmatube",
+      "path": "../Projects/Emma/emmatube"
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic"
+  }
 }
