@@ -1,12 +1,12 @@
 {
   "folders": [
     {
-      "name": "emmatube-web",
-      "path": "../Projects/Emma/emmatube-web"
-    },
-    {
       "name": "emmatube",
       "path": "../Projects/Emma/emmatube"
+    },
+    {
+      "name": "emmatube-web",
+      "path": "../Projects/Emma/emmatube-web"
     }
   ],
   "settings": {

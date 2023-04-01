@@ -5,10 +5,6 @@
       "path": "../Projects/Personal/phpinfo"
     },
     {
-      "name": "simple-sse",
-      "path": "../Projects/Personal/simple-sse"
-    },
-    {
       "name": "react-gtk",
       "path": "../Projects/Personal/react-gtk"
     },
@@ -25,10 +21,6 @@
       "path": "../j2mewtk/2.5.2/apps/j2me-playground"
     },
     {
-      "name": "learning-docker",
-      "path": "../Projects/Personal/learning-docker"
-    },
-    {
       "name": "learning-javascript-with-hammed",
       "path": "../Projects/Personal/learning-javascript-with-hammed"
     },
@@ -36,10 +28,13 @@
       "path": "../Projects/Personal/stereopay"
     },
     {
-      "path": "../Projects/Personal/admob-ads-in-flutter"
+      "path": "../Projects/Personal/learning-elm"
     },
     {
-      "path": "../Projects/Personal/learning-elm"
+      "path": "../Projects/Personal/crafty"
     }
-  ]
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic"
+  }
 }
