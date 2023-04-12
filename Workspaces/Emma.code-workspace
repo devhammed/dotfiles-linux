@@ -7,6 +7,9 @@
     {
       "name": "emmatube-web",
       "path": "../Projects/Emma/emmatube-web"
+    },
+    {
+      "path": "../Projects/Emma/emmatube-firebase"
     }
   ],
   "settings": {

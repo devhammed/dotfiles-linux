@@ -227,3 +227,7 @@ eval "$(starship init zsh)"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/devhammed/.dart-cli-completion/zsh-config.zsh ]] && . /home/devhammed/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+# Wasmer
+export WASMER_DIR="/home/devhammed/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
