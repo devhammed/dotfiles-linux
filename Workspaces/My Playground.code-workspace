@@ -35,6 +35,9 @@
     },
     {
       "path": "../Projects/Personal/asc"
+    },
+    {
+      "path": "../Projects/Personal/use-global-hook"
     }
   ],
   "settings": {
