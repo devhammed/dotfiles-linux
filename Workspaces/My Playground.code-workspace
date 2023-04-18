@@ -21,23 +21,13 @@
       "path": "../j2mewtk/2.5.2/apps/j2me-playground"
     },
     {
-      "name": "learning-javascript-with-hammed",
-      "path": "../Projects/Personal/learning-javascript-with-hammed"
-    },
-    {
-      "path": "../Projects/Personal/stereopay"
-    },
-    {
       "path": "../Projects/Personal/learning-elm"
     },
     {
-      "path": "../Projects/Personal/crafty"
+      "path": "../Projects/Personal/use-shared-hook"
     },
     {
-      "path": "../Projects/Personal/asc"
-    },
-    {
-      "path": "../Projects/Personal/use-global-hook"
+      "path": "../Projects/Personal/slint_rs"
     }
   ],
   "settings": {

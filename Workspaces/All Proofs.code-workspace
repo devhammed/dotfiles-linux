@@ -11,9 +11,6 @@
     {
       "name": "allproofs-app",
       "path": "../Projects/AllProofs/allproofs"
-    },
-    {
-      "path": "../Projects/AllProofs/investment-by-allproofs"
     }
   ]
 }
