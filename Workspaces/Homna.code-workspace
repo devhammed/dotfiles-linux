@@ -1,7 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "../Projects/Homna/homna"
-		}
-	]
+  "folders": [
+    {
+      "path": "../Projects/Homna/homna"
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "interactive"
+  }
 }
