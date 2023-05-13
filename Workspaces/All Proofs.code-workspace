@@ -12,5 +12,6 @@
       "name": "allproofs-app",
       "path": "../Projects/AllProofs/allproofs"
     }
-  ]
+  ],
+  "settings": {}
 }
