@@ -1,15 +1,16 @@
 {
   "folders": [
     {
-      "name": "spark",
+      "name": "spark (backend)",
       "path": "../Projects/JackWestin/spark"
     },
     {
-      "name": "site",
+      "name": "site (frontend)",
       "path": "../Projects/JackWestin/site"
     }
   ],
   "settings": {
-    "npm.packageManager": "yarn"
+    "npm.packageManager": "yarn",
+    "scss.lint.unknownAtRules": "ignore"
   }
 }

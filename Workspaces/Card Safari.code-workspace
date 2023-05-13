@@ -3,5 +3,9 @@
     {
       "path": "../Projects/CardSafari/cardsafari"
     }
-  ]
+  ],
+  "settings": {
+    "scss.lint.unknownAtRules": "ignore",
+    "intelephense.diagnostics.undefinedMethods": false
+  }
 }
