@@ -27,10 +27,17 @@
       "path": "../Projects/Personal/use-shared-hook"
     },
     {
-      "path": "../Projects/Personal/slint_rs"
+      "path": "../Projects/Personal/dart-js-interop"
+    },
+    {
+      "path": "../Projects/Personal/next-13"
+    },
+    {
+      "path": "../Projects/Personal/laravel-ddd"
     }
   ],
   "settings": {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "typescript.tsdk": "next-13/node_modules/typescript/lib"
   }
 }

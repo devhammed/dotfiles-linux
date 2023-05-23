@@ -1,6 +1,5 @@
 {
     "require": {
-        "genesisweb/valet-linux-plus": "^1.5",
         "phpcompatibility/php-compatibility": "^9.3"
     },
     "require-dev": {
