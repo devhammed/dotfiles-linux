@@ -63,11 +63,21 @@ if ! is_installed omz; then
 		mv "$HOME/.zshrc" "$HOME/.zshrc-main"
 	fi
 	
+	if [ -d "$HOME/.oh-my-zsh" ]; then
+		echo "Backing up oh-my-zsh folder..."
+		mv "$HOME/.oh-my-zsh" "$HOME/.oh-my-zsh-main"
+	fi
+	
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	
 	if [ -f "$HOME/.zshrc-main" ]; then
 		echo "Restoring .zshrc file..."
 		mv "$HOME/.zshrc-main" "$HOME/.zshrc"
+	fi
+	
+	if [ -d "$HOME/.oh-my-zsh-main" ]; then
+		echo "Restoring oh-my-zsh folder..."
+		mv "$HOME/.oh-my-zsh-main" "$HOME/.oh-my-zsh"
 	fi
 fi
 
