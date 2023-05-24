@@ -79,24 +79,29 @@ if ! is_installed omz; then
 		echo "Restoring oh-my-zsh folder..."
 		mv "$HOME/.oh-my-zsh-main" "$HOME/.oh-my-zsh"
 	fi
+
+	if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+		echo "Installing ZSH Autosuggestions..."
+		git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+	fi
+
+	if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+		echo "Installing ZSH Syntax Highlighting..."
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+	fi
+
+	if [ ! -d "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions" ]; then
+		echo "Installing ZSH Extra Completions..."
+		git clone https://github.com/zsh-users/zsh-completions "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions"
+	fi
+	
+	if [ ! -d "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/artisan" ]; then
+		echo "Installing ZSH Artisan Plugin..."
+		git clone https://github.com/jessarcher/zsh-artisan.git "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/artisan"
+	fi
 fi
 
-if ! [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
-	echo "Installing ZSH Autosuggestions..."
-	git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
-fi
-
-if ! [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
-	echo "Installing ZSH Syntax Highlighting..."
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-fi
-
-if ! [ -d "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions" ]; then
-	echo "Installing ZSH Extra Completions..."
-	git clone https://github.com/zsh-users/zsh-completions "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions"
-fi
-
-if ! [ -d "$HOME/Tools" ]; then
+if [ ! -d "$HOME/Tools" ]; then
 	echo "Creating Tools directory..."
 	mkdir -p "$HOME/Tools"
 fi
