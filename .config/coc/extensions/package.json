@@ -13,5 +13,7 @@
     "coc-snippets": ">=3.0.12",
     "coc-spell-checker": ">=1.2.0",
     "coc-tsserver": ">=1.10.4"
-  }
+  },
+  "disabled": [],
+  "locked": []
 }
