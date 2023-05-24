@@ -1,0 +1,103 @@
+#!/bin/sh
+
+echo "Going to HOME directory..."
+cd "$HOME"
+
+echo "Updating the yadm repo origin URL to SSH..."
+yadm remote set-url origin "git@github.com:devhammed/dotfiles-linux.git"
+
+is_installed() {
+	command -v "$1" >/dev/null 2>&1;
+}
+
+if ! is_installed git; then
+	echo "Installing Git..."
+ 	sudo apt install git
+fi
+
+if ! is_installed file; then
+	echo "Installing File CLI..."
+ 	sudo apt install file
+fi
+
+if ! is_installed lzma; then
+	echo "Installing XZ Utils..."
+ 	sudo apt install xz-utils
+fi
+
+if ! is_installed curl; then
+	echo "Installing cURL..."
+ 	sudo apt install curl
+fi
+
+if ! is_installed vim; then
+	echo "Installing Vim..."
+ 	sudo apt install vim
+fi
+
+if [ -f "$HOME/.vimrc" ]; then
+	echo "Bootstraping Vim..."
+	vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+fi
+
+if ! is_installed brew; then
+	echo "Installing Homebrew..."
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating Homebrew bundle..."
+    brew bundle --global
+fi
+
+if ! is_installed zsh; then
+	echo "Installing ZSH..."
+	sudo apt install zsh
+fi
+
+if ! is_installed omz; then
+	echo "Installing Oh-My-ZSH..."
+	
+	if [ -f "$HOME/.zshrc" ]; then
+		echo "Backing up .zshrc file..."
+		mv "$HOME/.zshrc" "$HOME/.zshrc-main"
+	fi
+	
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	
+	if [ -f "$HOME/.zshrc-main" ]; then
+		echo "Restoring .zshrc file..."
+		mv "$HOME/.zshrc-main" "$HOME/.zshrc"
+	fi
+fi
+
+if ! [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+	echo "Installing ZSH Autosuggestions..."
+	git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+fi
+
+if ! [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+	echo "Installing ZSH Syntax Highlighting..."
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+fi
+
+if ! [ -d "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions" ]; then
+	echo "Installing ZSH Extra Completions..."
+	git clone https://github.com/zsh-users/zsh-completions "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions"
+fi
+
+if ! [ -d "$HOME/Tools" ]; then
+	echo "Creating Tools directory..."
+	mkdir -p "$HOME/Tools"
+fi
+
+if ! is_installed flutter; then
+	echo "Installing Flutter..."
+	tarFile="flutter_linux_3.10.1-stable.tar.xz"
+	wget "https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/$tarFile"
+	tar xvf "$PWD/$tarFile"
+	mv "flutter" "$HOME/Tools"
+	sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev
+	flutter precache
+	flutter doctor -v
+fi
