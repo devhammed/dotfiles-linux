@@ -37,7 +37,7 @@ fi
 
 if [ -f "$HOME/.vimrc" ]; then
 	echo "Bootstraping Vim..."
-	vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+	vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+Copilot setup'  '+qall'
 fi
 
 if ! is_installed brew; then
