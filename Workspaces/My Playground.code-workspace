@@ -1,6 +1,9 @@
 {
   "folders": [
     {
+      "path": "../Projects/Personal/laravel-graphql-api"
+    },
+    {
       "name": "phpinfo",
       "path": "../Projects/Personal/phpinfo"
     },
@@ -34,10 +37,9 @@
     },
     {
       "path": "../Projects/Personal/laravel-json-api"
-    }
+    },
   ],
   "settings": {
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "typescript.tsdk": "next-13/node_modules/typescript/lib"
+    "java.configuration.updateBuildConfiguration": "automatic"
   }
 }
