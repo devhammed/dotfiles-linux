@@ -11,6 +11,7 @@
   ],
   "settings": {
     "npm.packageManager": "yarn",
-    "scss.lint.unknownAtRules": "ignore"
+    "scss.lint.unknownAtRules": "ignore",
+    "intelephense.format.enable": false
   }
 }
