@@ -4,33 +4,7 @@
       "path": "../Projects/Personal/laravel-graphql-api"
     },
     {
-      "name": "phpinfo",
-      "path": "../Projects/Personal/phpinfo"
-    },
-    {
-      "name": "react-gtk",
-      "path": "../Projects/Personal/react-gtk"
-    },
-    {
-      "name": "lets-learn-adonis-5",
-      "path": "../Projects/Personal/lets-learn-adonis-5"
-    },
-    {
-      "name": "wicked.js",
-      "path": "../Projects/Personal/wicked.js"
-    },
-    {
-      "name": "j2me-playground",
-      "path": "../j2mewtk/2.5.2/apps/j2me-playground"
-    },
-    {
-      "path": "../Projects/Personal/learning-elm"
-    },
-    {
       "path": "../Projects/Personal/use-shared-hook"
-    },
-    {
-      "path": "../Projects/Personal/dart-js-interop"
     },
     {
       "path": "../Projects/Personal/next-13"
@@ -38,6 +12,9 @@
     {
       "path": "../Projects/Personal/laravel-json-api"
     },
+    {
+      "path": "../Projects/Personal/reacting-to-php"
+    }
   ],
   "settings": {
     "java.configuration.updateBuildConfiguration": "automatic"

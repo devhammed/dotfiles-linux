@@ -141,9 +141,6 @@ export GOSRC="$GOPATH/src/github.com/$USER"
 # setup Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Setup WTK
-export PATH="$HOME/Tools/wtk/bin:$PATH"
-
 # Load Node.js extra CA Certificates
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
