@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "../Projects/GoChap/api"
+    },
+    {
+      "path": "../Projects/GoChap/app"
     }
   ]
 }
