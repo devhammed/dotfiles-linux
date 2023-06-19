@@ -14,6 +14,9 @@
     },
     {
       "path": "../Projects/Personal/reacting-to-php"
+    },
+    {
+      "path": "../Projects/Personal/simple-orm"
     }
   ],
   "settings": {
