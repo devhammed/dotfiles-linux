@@ -1,7 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "../Projects/Italgres/b2b"
-		}
-	]
+  "folders": [
+    {
+      "path": "../Projects/Italgres/b2b"
+    }
+  ],
+  "settings": {
+    "figma.assetExportDirectory": "resources/images",
+    "intelephense.diagnostics.undefinedMethods": false
+  }
 }

@@ -17,6 +17,9 @@
     },
     {
       "path": "../Projects/Personal/simple-orm"
+    },
+    {
+      "path": "../Projects/Personal/dart_result"
     }
   ],
   "settings": {
