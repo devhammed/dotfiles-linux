@@ -1,5 +1,4 @@
 {
   "enable-linux-desktop": true,
-  "android-sdk": "/home/devhammed/Android/Sdk",
-  "android-studio-dir": "/snap/android-studio/current/android-studio/"
+  "android-sdk": "/home/devhammed/Android/Sdk"
 }
