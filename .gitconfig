@@ -15,6 +15,7 @@
 [core]
 	sshCommand = "ssh -i ~/.ssh/id_personal_hp_250_g8"
 	excludesFile = ~/.gitignore
+	autocrlf = input
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]

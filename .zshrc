@@ -110,12 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-
 alias cat="bat"
-alias zshconfig="vim ~/.zshrc"
-alias flg="fluttergen"
-alias flpb="flutter pub run build_runner build --delete-conflicting-outputs"
 
 # Load Snapcraft Environment
 export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
