@@ -1,0 +1,5 @@
+[user]
+	email = hammed@nomadinternet.com
+	signingkey = 5FC72BA584941D41
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_nomad_internet_hp_250_g8"

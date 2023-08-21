@@ -124,6 +124,10 @@ export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbi
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
+# load fly.io command tool
+export FLYCTL_INSTALL="/home/devhammed/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # load Flutter and Dart global packages environment
 export PATH="$HOME/Tools/flutter/bin:$HOME/.pub-cache/bin:$PATH"
 
@@ -170,7 +174,7 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 
   ssh-add ~/.ssh/id_personal_hp_250_g8 > /dev/null 2>&1
 
-  ssh-add ~/.ssh/id_gisthouse_hp_250_g8 > /dev/null 2>&1
+  ssh-add ~/.ssh/id_nomad_internet_hp_250_g8 > /dev/null 2>&1
 fi
 
 # load Homebrew ZSH autocompletions
