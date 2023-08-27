@@ -168,13 +168,13 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval "$(ssh-agent -s)"
 
-  ssh-add ~/.ssh/id_vertex_hp_250_g8 > /dev/null 2>&1
+  ssh-add ~/.ssh/id_vertex > /dev/null 2>&1
 
-  ssh-add ~/.ssh/id_decagon_hp_250_g8 > /dev/null 2>&1
+  ssh-add ~/.ssh/id_decagon > /dev/null 2>&1
 
-  ssh-add ~/.ssh/id_personal_hp_250_g8 > /dev/null 2>&1
+  ssh-add ~/.ssh/id_personal > /dev/null 2>&1
 
-  ssh-add ~/.ssh/id_nomad_internet_hp_250_g8 > /dev/null 2>&1
+  ssh-add ~/.ssh/id_nomad_internet > /dev/null 2>&1
 fi
 
 # load Homebrew ZSH autocompletions
