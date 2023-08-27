@@ -224,9 +224,8 @@ eval "$(starship init zsh)"
 [[ -f /home/devhammed/.dart-cli-completion/zsh-config.zsh ]] && . /home/devhammed/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
-# Wasmer
-export WASMER_DIR="/home/devhammed/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+# Dircolors
+eval `dircolors /home/devhammed/.dir_colors/dircolors`
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
