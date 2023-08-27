@@ -149,9 +149,6 @@ export EDITOR="vim"
 # Set CLI Web Browser
 export BROWSER="google-chrome"
 
-# Setup JetBrains ToolBox
-export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
-
 # Load Android SDK Environment
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"

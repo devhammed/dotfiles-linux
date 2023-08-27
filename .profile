@@ -25,8 +25,11 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-. "$HOME/.cargo/env"
 
+# set cargo env
+if [ -f "$HOME/.cargo/env" ]
+    . "$HOME/.cargo/env"
+fi
 
 # Added by Toolbox App
 export PATH="$PATH:/home/devhammed/.local/share/JetBrains/Toolbox/scripts"

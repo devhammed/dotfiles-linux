@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "genesisweb/valet-linux-plus",
-            "version": "1.6.6",
+            "version": "1.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genesisweb/valet-linux-plus.git",
-                "reference": "8d11419fcdb629f87aeac822e1c234097a14bdf8"
+                "reference": "b9a2f64f253908fc0de03eff14ec735614ae4eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genesisweb/valet-linux-plus/zipball/8d11419fcdb629f87aeac822e1c234097a14bdf8",
-                "reference": "8d11419fcdb629f87aeac822e1c234097a14bdf8",
+                "url": "https://api.github.com/repos/genesisweb/valet-linux-plus/zipball/b9a2f64f253908fc0de03eff14ec735614ae4eda",
+                "reference": "b9a2f64f253908fc0de03eff14ec735614ae4eda",
                 "shasum": ""
             },
             "require": {
@@ -95,9 +95,9 @@
             ],
             "support": {
                 "issues": "https://github.com/genesisweb/valet-linux-plus/issues",
-                "source": "https://github.com/genesisweb/valet-linux-plus/tree/1.6.6"
+                "source": "https://github.com/genesisweb/valet-linux-plus/tree/1.6.7"
             },
-            "time": "2023-04-24T05:23:02+00:00"
+            "time": "2023-07-08T12:15:26+00:00"
         },
         {
             "name": "illuminate/container",
