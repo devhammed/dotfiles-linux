@@ -3,4 +3,4 @@
 	email = hoyedele@vertex.com
 	signingkey = 24A85A66BD4EED61
 [core]
-	sshCommand = "ssh -i ~/.ssh/id_vertex_hp_250_g8"
+	sshCommand = "ssh -i ~/.ssh/id_vertex"

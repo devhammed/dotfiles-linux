@@ -2,4 +2,4 @@
 	email = hammedo@decagonhq.com
 	signingkey = 2528888A03DFDF61
 [core]
-	sshCommand = "ssh -i ~/.ssh/id_decagon_hp_250_g8"
+	sshCommand = "ssh -i ~/.ssh/id_decagon"

@@ -13,7 +13,7 @@
 [pull]
 	rebase = false
 [core]
-	sshCommand = "ssh -i ~/.ssh/id_personal_hp_250_g8"
+	sshCommand = "ssh -i ~/.ssh/id_personal"
 	excludesFile = ~/.gitignore
 	autocrlf = input
 [includeIf "gitdir:~/Projects/Decagon/"]
