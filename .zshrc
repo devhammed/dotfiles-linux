@@ -149,6 +149,15 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ADB="$ANDROID_HOME/platform-tools/adb"
 export PATH="/snap/android-studio/current/android-studio/jre/bin:$PATH"
 
+# setup Go environment
+export GOPATH="$HOME/Tools/go"
+export PATH="$GOPATH/bin:$PATH"
+export GOSRC="$GOPATH/src/github.com/$USER"
+[[ ! -d "$GOSRC" ]] && mkdir -p "$GOSRC"
+
+# setup Rust environment
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Load Composer environment
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
