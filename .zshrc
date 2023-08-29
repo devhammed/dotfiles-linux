@@ -131,15 +131,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # load Flutter and Dart global packages environment
 export PATH="$HOME/Tools/flutter/bin:$HOME/.pub-cache/bin:$PATH"
 
-# setup Go environment
-export GOPATH="$HOME/Tools/go"
-export PATH="$GOPATH/bin:$PATH"
-export GOSRC="$GOPATH/src/github.com/$USER"
-[[ ! -d "$GOSRC" ]] && mkdir -p "$GOSRC"
-
-# setup Rust environment
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # Load Node.js extra CA Certificates
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
