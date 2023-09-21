@@ -2,7 +2,7 @@
 	name = Hammed Oyedele
 	email = itz.harmid@gmail.com
 	username = devhammed
-	signingkey = B8E2CB30A8D8071C
+	signingkey = 990729A301F44E5C
 [init]
 	defaultBranch = main
 	templatedir = ~/.git-template

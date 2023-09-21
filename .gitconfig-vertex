@@ -1,6 +1,6 @@
 [user]
 	username = hoyedele-vertex
 	email = hoyedele@vertex.com
-	signingkey = 24A85A66BD4EED61
+	signingkey = 261392B49887F6A5
 [core]
 	sshCommand = "ssh -i ~/.ssh/id_vertex"
