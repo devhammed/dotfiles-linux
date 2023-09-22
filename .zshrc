@@ -170,8 +170,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   ssh-add ~/.ssh/id_decagon > /dev/null 2>&1
 
   ssh-add ~/.ssh/id_personal > /dev/null 2>&1
-
-  ssh-add ~/.ssh/id_nomad_internet > /dev/null 2>&1
 fi
 
 # load Homebrew ZSH autocompletions
