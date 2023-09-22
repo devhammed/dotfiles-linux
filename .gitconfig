@@ -20,7 +20,5 @@
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
   path = ~/.gitconfig-vertex
-[includeIf "gitdir:~/Projects/NomadInternet/"]
-  path = ~/.gitconfig-nomad-internet
 [merge]
 	renamelimit = 10000
