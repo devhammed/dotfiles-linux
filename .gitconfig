@@ -17,7 +17,7 @@
 	excludesFile = ~/.gitignore
   autocrlf = input
 [merge]
-  renamelimit = 10000
+  renamelimit = 100000
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
