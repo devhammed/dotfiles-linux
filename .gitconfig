@@ -15,10 +15,10 @@
 [core]
 	sshCommand = "ssh -i ~/.ssh/id_personal"
 	excludesFile = ~/.gitignore
-	autocrlf = input
+  autocrlf = input
+[merge]
+  renamelimit = 10000
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
   path = ~/.gitconfig-vertex
-[merge]
-	renamelimit = 10000
