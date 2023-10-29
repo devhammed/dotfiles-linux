@@ -5,9 +5,9 @@
 	signingkey = 990729A301F44E5C
 [init]
 	defaultBranch = main
-	templatedir = ~/.git-template
+	templateDir = ~/.git-template
 [commit]
-	gpgsign = true
+	gpgSign = true
 [tag]
 	gpgSign = true
 [pull]
@@ -17,7 +17,7 @@
 	excludesFile = ~/.gitignore
   autocrlf = input
 [merge]
-  renamelimit = 100000
+  renameLimit = 100000
 [includeIf "gitdir:~/Projects/Decagon/"]
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
