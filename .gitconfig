@@ -9,7 +9,7 @@
 [commit]
 	gpgsign = true
 [tag]
-	forceSignAnnotated = true
+	gpgSign = true
 [pull]
 	rebase = false
 [core]
