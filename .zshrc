@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias cat="bat"
+alias phpdbg="php -dxdebug.mode=debug -dxdebug.start_with_request=yes -dxdebug.client_host=127.0.0.1 -dxdebug.client_port=9003"
+alias phpdbg74="php7.4 -dxdebug.mode=debug -dxdebug.start_with_request=yes -dxdebug.client_host=127.0.0.1 -dxdebug.client_port=9003"
 
 # Load Snapcraft Environment
 export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
