@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+dir=.
+
+until [ $dir -ef / ]; do
+  ace_path="$dir/ace"
+
+  if [ -f "$ace_path" ]; then
+	  cmd="node $ace_path"
+    
+    start_time=`date +%s`
+
+    eval $cmd $*
+		
+    status="$?"
+
+    adonis_path=`dirname $ace_path`
+    
+    if [[ "$1" = "make:"* && $ACE_OPEN_ON_MAKE_EDITOR != "" ]]; then
+		  find "$adonis_path/app" "$adonis_path/tests"  "$adonis_path/database" "$adonis_path/providers" "$adonis_path/commands" "$adonis_path/start" "$adonis_path/resources" -type f -newermt "-$((`date +%s` - $start_time + 1)) seconds" -exec $ACE_OPEN_ON_MAKE_EDITOR {} \; 2> /dev/null
+	  fi
+
+    exit $status
+	fi
+
+  dir+=/..
+done
+
+echo 'Ace not found. Are you in an Adonis.js directory?'
+
+exit 1
