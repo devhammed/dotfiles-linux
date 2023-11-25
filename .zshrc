@@ -197,6 +197,12 @@ fi
 # Disable PHP-CS-Fixer env checks
 export PHP_CS_FIXER_IGNORE_ENV=true
 
+# Setup Editor for Ace
+export ACE_OPEN_ON_MAKE_EDITOR="phpstorm"
+
+# Setup Editor for Artisan
+export ARTISAN_OPEN_ON_MAKE_EDITOR="phpstorm"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc'; fi
 
