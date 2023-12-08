@@ -111,8 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias cat="bat"
-alias phpdbg="php -dxdebug.mode=debug -dxdebug.start_with_request=yes -dxdebug.client_host=127.0.0.1 -dxdebug.client_port=9003"
-alias phpdbg74="php7.4 -dxdebug.mode=debug -dxdebug.start_with_request=yes -dxdebug.client_host=127.0.0.1 -dxdebug.client_port=9003"
+alias create-laravel-app="composer create-project --prefer-dist laravel/laravel"
 
 # Load Snapcraft Environment
 export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
@@ -204,16 +203,13 @@ export ACE_OPEN_ON_MAKE_EDITOR="phpstorm"
 export ARTISAN_OPEN_ON_MAKE_EDITOR="phpstorm"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/home/devhammed/Tools/google-cloud-sdk/path.zsh.inc'; fi
+[[ -f "$HOME/Tools/google-cloud-sdk/path.zsh.inc" ]] && . "$HOME/Tools/google-cloud-sdk/path.zsh.inc" || true
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/devhammed/Tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/devhammed/Tools/google-cloud-sdk/completion.zsh.inc'; fi
+[[ -f "$HOME/Tools/google-cloud-sdk/completion.zsh.inc" ]] && . "$HOME/Tools/google-cloud-sdk/completion.zsh.inc" || true
 
 # Load Zoxide
 eval "$(zoxide init zsh)"
-
-# Setup GH Configuration Directory
-export GH_CONFIG_DIR="$HOME/.config/gh/personal"
 
 # Load DirEnv
 export DIRENV_LOG_FORMAT=
@@ -222,13 +218,11 @@ eval "$(direnv hook zsh)"
 # Load Starship Prompt
 eval "$(starship init zsh)"
 
-## [Completion] 
-## Completion scripts setup. Remove the following line to uninstall
+# Dart CLI Completion
 [[ -f "$HOME/.dart-cli-completion/zsh-config.zsh" ]] && . "$HOME/.dart-cli-completion/zsh-config.zsh" || true
-## [/Completion]
 
 # Dircolors
-eval `dircolors /home/devhammed/.dir_colors/dircolors`
+[[ -f "$HOME/.dir_colors/dircolors"  ]] && eval `dircolors "$HOME/.dir_colors/dircolors"` || true
 
 # Load Valet Completion
 [[ -f "$HOME/.valet-zsh" ]] && source "$HOME/.valet-zsh" || true
