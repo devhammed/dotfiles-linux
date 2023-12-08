@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias cat="bat"
+alias php="valet php"
+alias composer="valet composer"
 alias create-laravel-app="composer create-project --prefer-dist laravel/laravel"
 
 # Load Snapcraft Environment
