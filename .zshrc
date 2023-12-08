@@ -224,11 +224,14 @@ eval "$(starship init zsh)"
 
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/devhammed/.dart-cli-completion/zsh-config.zsh ]] && . /home/devhammed/.dart-cli-completion/zsh-config.zsh || true
+[[ -f "$HOME/.dart-cli-completion/zsh-config.zsh" ]] && . "$HOME/.dart-cli-completion/zsh-config.zsh" || true
 ## [/Completion]
 
 # Dircolors
 eval `dircolors /home/devhammed/.dir_colors/dircolors`
+
+# Load Valet Completion
+[[ -f "$HOME/.valet-zsh" ]] && source "$HOME/.valet-zsh" || true
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
