@@ -1,7 +1,7 @@
 {
     "require": {
         "phpcompatibility/php-compatibility": "^9.3",
-        "genesisweb/valet-linux-plus": "^1.6"
+        "genesisweb/valet-linux-plus": "v1.6.7"
     },
     "require-dev": {
         "automattic/vipwpcs": "^2.3",
