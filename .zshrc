@@ -183,6 +183,9 @@ if [[ -d "$HOME/.zfunc" ]]; then
   fpath+="$HOME/.zfunc"
 fi
 
+# Load Stripe CLI Completion
+fpath=(~/.stripe $fpath)
+
 # initialize completions engine
 autoload -Uz compinit
 
