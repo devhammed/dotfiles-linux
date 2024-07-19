@@ -1,5 +1,6 @@
 [user]
 	username = oyedeleh_merck
 	email = oyedeleh@merck.com
+  signingkey = 9B2207616A87D0F8
 [core]
 	sshCommand = "ssh -i ~/.ssh/id_merck"
