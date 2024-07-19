@@ -1,0 +1,5 @@
+[user]
+	username = oyedeleh_merck
+	email = oyedeleh@merck.com
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_merck"
