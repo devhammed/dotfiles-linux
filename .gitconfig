@@ -22,3 +22,5 @@
 	path = ~/.gitconfig-decagon
 [includeIf "gitdir:~/Projects/Vertex/"]
   path = ~/.gitconfig-vertex
+[includeIf "gitdir:~/Projects/Merck/"]
+  path = ~/.gitconfig-merck

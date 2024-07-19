@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e4f8204eca59a60e71c39a801156e45",
+    "content-hash": "e7a1ee12c5f25af8991b96f7a2ab70d4",
     "packages": [
         {
             "name": "genesisweb/valet-linux-plus",
-            "version": "1.6.7",
+            "version": "1.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/genesisweb/valet-linux-plus.git",
-                "reference": "b9a2f64f253908fc0de03eff14ec735614ae4eda"
+                "reference": "d3697c46c2362957ee73f52723051dceb7461d80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genesisweb/valet-linux-plus/zipball/b9a2f64f253908fc0de03eff14ec735614ae4eda",
-                "reference": "b9a2f64f253908fc0de03eff14ec735614ae4eda",
+                "url": "https://api.github.com/repos/genesisweb/valet-linux-plus/zipball/d3697c46c2362957ee73f52723051dceb7461d80",
+                "reference": "d3697c46c2362957ee73f52723051dceb7461d80",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-posix": "*",
-                "illuminate/container": "~5.1|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/container": "~5.1|^6.0|^7.0|^8.0|^9.0|^10.0",
                 "mnapoli/silly": "~1.1",
                 "nategood/httpful": "~0.2",
-                "php": "^7.1|^8.0|^8.1",
+                "php": "^7.1|^7.2|^7.3|^8.0|^8.1|^8.2|^8.3",
                 "symfony/process": "^3.0|^4.0|^5.0|^6.0",
                 "tightenco/collect": "^5.3|^6.0|^7.0|^8.0"
             },
@@ -95,9 +95,9 @@
             ],
             "support": {
                 "issues": "https://github.com/genesisweb/valet-linux-plus/issues",
-                "source": "https://github.com/genesisweb/valet-linux-plus/tree/1.6.7"
+                "source": "https://github.com/genesisweb/valet-linux-plus/tree/1.6.9"
             },
-            "time": "2023-07-08T12:15:26+00:00"
+            "time": "2024-04-07T07:07:57+00:00"
         },
         {
             "name": "illuminate/container",
