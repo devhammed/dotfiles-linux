@@ -1,0 +1,24 @@
+version: "3"
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    restart: on-failure
+    stop_grace_period: 2m
+    environment:
+      VERSION: "win11"
+      RAM_SIZE: "8G"
+      CPU_CORES: "4"
+      DISK_SIZE: "256G"
+      ARGUMENTS: "-enable-kvm -audio alsa -device ich9-intel-hda -device hda-output -device usb-host,vendorid=0x27c6,productid=0x5395"
+    devices:
+      - /dev/kvm
+      - /dev/bus/usb
+    cap_add:
+      - ALL
+    volumes:
+      - /var/windows:/storage
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
